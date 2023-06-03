@@ -50,6 +50,7 @@ jobs:
           make
           ./hello
           FILE_NAME=hello-$(data "+%Y%m%d%H%S")
+          echo $FILE_NAME
           mv hello $FILE_NAME
           echo "release_file=$FILE_NAME" >> $GITHUB_OUTPUT
           popd
