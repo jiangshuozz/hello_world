@@ -58,7 +58,7 @@ jobs:
         uses: actions/upload-artifact@v3
         with:
           name: main_firmware
-          path: ./build/hello
+          path: ./build/${{ steps.compile.outputs.release_file }}
       - name: Upload release
         #if: github.event == 'release'
         uses: svenstaro/upload-release-action@v2
