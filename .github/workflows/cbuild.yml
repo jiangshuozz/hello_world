@@ -38,3 +38,10 @@ jobs:
           ls -a
           pwd
           gcc --version
+          cmake --version
+          mkdir -pv build
+          pushd .
+          cd build
+          cmake ..
+          make
+          popd
