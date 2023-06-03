@@ -46,3 +46,8 @@ jobs:
           make
           ./hello
           popd
+      - name: Upload firmware
+        uses: actions/upload-artifact@v3
+        with:
+          name: main_firmware
+          path: ./build/hello
