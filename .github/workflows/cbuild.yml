@@ -55,7 +55,7 @@ jobs:
           name: main_firmware
           path: ./build/hello
       - name: Upload release
-        # if: github.event == 'release'
+        if: github.event == 'release'
         uses: svenstaro/upload-release-action@v2
         with:
           repo_token: ${{ secrets.YOURTOKEN }}
