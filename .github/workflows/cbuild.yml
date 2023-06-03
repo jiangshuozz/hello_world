@@ -49,7 +49,7 @@ jobs:
           cmake ..
           make
           ./hello
-          FILE_NAME=$(data "+%Y%m%d%H%S")
+          FILE_NAME=hello-$(date "+%Y%m%d%H%S")
           echo $FILE_NAME
           mv hello $FILE_NAME
           echo "release_file=$FILE_NAME" >> $GITHUB_OUTPUT
